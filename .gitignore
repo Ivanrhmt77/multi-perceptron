@@ -1,0 +1,66 @@
+# ==================================
+# File dan folder yang dihasilkan oleh Maven
+# ==================================
+# Folder output utama dari proses build
+target/
+
+# POM yang dibuat sementara oleh maven-shade-plugin
+dependency-reduced-pom.xml
+
+# File-file yang dibuat oleh Maven release plugin
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+buildNumber.properties
+
+# ==================================
+# File log dan output aplikasi
+# ==================================
+# Folder log yang berisi file CSV kita
+logs/
+
+# Pola umum untuk mengabaikan semua file .log dan .csv
+*.log
+*.csv
+
+# Hasil visualisasi atau output lainnya
+*.png
+*.pdf
+
+# ==================================
+# File-file spesifik IDE (Praktik Terbaik)
+# ==================================
+# IntelliJ
+.idea/
+*.iml
+*.iws
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# VS Code
+.vscode/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+.nb-gradle/
+
+# ==================================
+# File sistem operasi
+# ==================================
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Lain-lain
+*.swp
