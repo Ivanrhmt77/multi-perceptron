@@ -1,0 +1,33 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder><pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern></encoder>
+    </appender>
+
+    <appender name="CSV_APPENDER" class="ch.qos.logback.core.FileAppender">
+        <file>logs/training_results.csv</file>
+        <append>false</append>
+        <encoder><pattern>%msg%n</pattern></encoder>
+    </appender>
+    
+    <appender name="EPOCH_CSV_APPENDER" class="ch.qos.logback.core.FileAppender">
+        <file>logs/epoch_log.csv</file>
+        <append>false</append>
+        <encoder><pattern>%msg%n</pattern></encoder>
+    </appender>
+
+    <logger name="CSVDATA" level="INFO" additivity="false">
+        <appender-ref ref="CSV_APPENDER" />
+    </logger>
+
+    <logger name="EPOCHDATA" level="INFO" additivity="false">
+        <appender-ref ref="EPOCH_CSV_APPENDER" />
+    </logger>
+    
+    <logger name="GRADIENTDATA" level="TRACE" additivity="false">
+        <appender-ref ref="FILE" /> 
+    </logger>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
